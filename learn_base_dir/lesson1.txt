@@ -1,0 +1,23 @@
+INSERT INTO Team('Name')
+
+VALUES ('Liverpool'),
+	('RealMadrid'),
+	('Juventus'), ('Barselona'),
+	('manchestercity'),
+	('Chelsea')
+
+
+SELECT * FROM Team t
+JOIN League l  ON t.LeagId  == l.Id 
+
+SELECT t.Name, l.Name FROM Team t
+JOIN League l  ON t.LeagId  == l.Id
+
+SELECT t.Name, l.Name FROM Team t
+LEFT JOIN League l  ON t.LeagId  == l.Id
+
+UPDATE Team 
+SET LeagId = 1
+WHERE Name == 'Liverpool'
+
+SELECT * FROM League l 
